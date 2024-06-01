@@ -1,0 +1,16 @@
+langchain==0.1.12
+openai==1.14.0
+datasets==2.18.0
+pinecone-client==3.1.0
+tiktoken==0.6.0
+flask
+flask-socketio
+eventlet
+langchain-community 
+langchainhub 
+langchain-openai 
+langchain-chroma 
+bs4
+pypdf
+pypdf2
+unstructured
