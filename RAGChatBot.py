@@ -2,7 +2,7 @@ import os
 from langchain_openai import ChatOpenAI
 from pydantic.v1 import SecretStr
 from KnowledgeBase import get_chroma_vector_store
-from LoadData import get_all_splits
+from LoadData import obtener_pedazos
 from langchain_core.prompts import PromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 from langchain_openai import OpenAIEmbeddings
@@ -37,7 +37,7 @@ def QA(nombrepdf:str):
 	​print("Splitting pages into chunks...")
 	​#separamos las paginas del archivos y cada pagina la separamos
 	​#en pequeños pedazos de contenido llamados chunks
-	​chunks = obtener_chunks(nombrepdf)    
+	​chunks = obtener_pedazos(nombrepdf)    
 	
 	​#aqui creamos los embeddings que utilizaremos más adelante para preparar los
 	​#datos que utilizaremos para chatear.​
