@@ -1,5 +1,4 @@
-import bs4
-from langchain_community.document_loaders import WebBaseLoader, PyPDFLoader
+from langchain_community.document_loaders import PyPDFLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 def extraer_paginas(nombrepdf):
@@ -13,7 +12,8 @@ def extraer_paginas(nombrepdf):
 
 def separar_paginas(paginas, dimension):
     try:
-        text_splitter = RecursiveCharacterTextSplitter(chunk_size=dimension, chunk_overlap=200, add_start_index=True)
+        text_splitter = RecursiveCharacterTextSplitter(chunk_size=dimension, 
+                                chunk_overlap=200, add_start_index=True)
         chunks = text_splitter.split_documents(paginas)
         print(f"Se separaron {len(paginas)} paginas en {len(chunks)} pedazos")
         return chunks
