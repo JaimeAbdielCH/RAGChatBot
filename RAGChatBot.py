@@ -1,7 +1,7 @@
 import os
 from langchain_openai import ChatOpenAI
 from pydantic.v1 import SecretStr
-from KnowledgeBase import get_chroma_vector_store
+from BaseDeConocimiento import get_chroma_vector_store
 from CargarData import obtener_pedazos
 from langchain_core.prompts import PromptTemplate
 from langchain_core.output_parsers import StrOutputParser
